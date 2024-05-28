@@ -25,4 +25,10 @@ public class MenuManager : MonoBehaviour
     {
         _settingsPanel.SetActive(false);
     }
+
+    public void ExitToMenu()
+    {
+        Application.LoadLevel("Menu");
+        TopScore.SaveTopScore(ScoreCounter.HighRuntimeScore);
+    }
 }

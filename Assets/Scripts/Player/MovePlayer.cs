@@ -18,7 +18,8 @@ public class MovePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Application.platform == RuntimePlatform.Android) _horizontal = Input.acceleration.x;
+        if (Application.platform == RuntimePlatform.Android)
+            _horizontal = Input.acceleration.x;
 
         if (Input.acceleration.x < 0)
         {
@@ -43,11 +44,10 @@ public class MovePlayer : MonoBehaviour
         
        
     }
-
     
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.name == "DeadZone") SceneManager.LoadScene(0);
+        TopScore.SaveTopScore(ScoreCounter.HighRuntimeScore);
     }
 }

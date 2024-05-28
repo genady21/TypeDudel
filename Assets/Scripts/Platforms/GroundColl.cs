@@ -20,6 +20,7 @@ public class GroundColl : MonoBehaviour
               float RandX = Random.Range(-1.2f, 2.6f);
               float RandY = Random.Range(transform.position.y+22f,transform.position.y+22f);
               transform.position = new Vector3(RandX, RandY, 0);
+              
         }
     }
 }

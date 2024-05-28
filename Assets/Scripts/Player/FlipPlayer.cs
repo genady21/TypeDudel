@@ -15,8 +15,6 @@ public class FlipPlayer : MonoBehaviour
         {
             if(!_facingRight) Flip();
         }
-
-        Debug.Log(horizontalInput);
     }
     
     private void Flip()

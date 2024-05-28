@@ -8,7 +8,7 @@ public class MoveCamera : MonoBehaviour
     [SerializeField]private Transform _player;
     private Vector3 _pos;
     [SerializeField] private float _speedCam = 4;
-    [SerializeField] private float _distanceToCamera = -2f;
+    [SerializeField] private float _distanceToCamera = -3f;
 
 
     private void Awake()
