@@ -6,7 +6,7 @@ public class FlipPlayer : MonoBehaviour
     
     private void Update()
     {
-        var horizontalInput = Input.GetAxis("Horizontal");
+        var horizontalInput = InputSystem.HorizontalInput;
         if (horizontalInput > 0)
         {
             if(_facingRight) Flip();

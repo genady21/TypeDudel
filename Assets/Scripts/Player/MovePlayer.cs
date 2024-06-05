@@ -8,6 +8,7 @@ public class MovePlayer : MonoBehaviour
     private float _horizontal;
     public static MovePlayer instance;
     [SerializeField] private Transform _player;
+   
     
 
 
@@ -16,9 +17,9 @@ public class MovePlayer : MonoBehaviour
         if (instance == null) instance = this;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (Application.platform == RuntimePlatform.Android)
+       /* if (Application.platform == RuntimePlatform.Android)
             _horizontal = Input.acceleration.x;
 
         if (Input.acceleration.x < 0)
@@ -34,9 +35,9 @@ public class MovePlayer : MonoBehaviour
         }
 
         _rb.velocity = new Vector2(Input.acceleration.x * 10f, _rb.velocity.y);
+*/
 
-
-        var horizontalInput = Input.GetAxis("Horizontal");
+           var horizontalInput = InputSystem.HorizontalInput;
         var movement = new Vector2(horizontalInput, 0f);
         var a = movement.x * _speed;
         _rb.velocity = new Vector2(a, _rb.velocity.y);

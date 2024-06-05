@@ -21,7 +21,7 @@ public class ScoreCounter : MonoBehaviour
 
     private void UpdateScore()
     {
-        _runtimeScore = Mathf.FloorToInt(transform.position.y);
+        _runtimeScore = (int)transform.position.y;
         if (_runtimeScore > HighRuntimeScore)
         {
             HighRuntimeScore = _runtimeScore;
